@@ -32,11 +32,11 @@ var board = ChessBoard('boardiv', {
 
 1. Alpha `alpha_theme`.
 
-![chesspieces\alpha\wK.png]![chesspieces\alpha\wP.png]
+![chesspieces/alpha/wK.png]![chesspieces\alpha\wP.png]
 
 1. Wikipedia `wikipedia_theme`.
 
-![chesspieces\wikipedia\wK.png]![chesspieces\wikipedia\wP.png]
+![chesspieces/wikipedia/wK.png]![chesspieces\wikipedia\wP.png]
 
 1. USCF `uscf_theme`.
 1. Symbol `symbol_theme`.
