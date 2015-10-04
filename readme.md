@@ -2,6 +2,17 @@
 
 A differents set of pieces themes for *chessboardjs*. No images requiered.
 
+## Live Version
+
+See the themes in this [link](). 
+
+## Why this
+
+For necessity I needed remove images requiriments for pieces, so an alternative was turn 
+image to a data-uri format.
+
+Other reson was have more pieces themes.
+
 ## How to use
 
 1. Load *chessboard.js* and *chessboard.css* as usual.
@@ -11,7 +22,7 @@ A differents set of pieces themes for *chessboardjs*. No images requiered.
 ## Example Use
 
 ```
-var board = ChessBoard('aboardiv', {
+var board = ChessBoard('boardiv', {
   pieceTheme: symbol_theme,
   position: 'start'
 });
@@ -19,8 +30,13 @@ var board = ChessBoard('aboardiv', {
 
 ## Themes
 
-1. Alpha `alpha_theme`
-1. Wikipedia `wikipedia_theme`
-1. USCF `uscf_theme`
-1. Symbol `symbol_theme`
-1. Dilen `dilena_theme`.
+1. Alpha `alpha_theme`.
+1. Wikipedia `wikipedia_theme`.
+1. USCF `uscf_theme`.
+1. Symbol `symbol_theme`.
+1. Dilena `dilena_theme`. This is a Chess Artwork for Pieces by [Daniela Di Lena](http://www.dilena.de/161491/1618285/work/chess-pieces-and-board).
+
+## To Do
+
+1. Color Themes: Create CSS themes or implement a easy way to add color via js function.
+2. More pieces.
