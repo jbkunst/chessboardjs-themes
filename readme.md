@@ -4,7 +4,7 @@ A differents set of pieces themes for *chessboardjs*. No images requiered.
 
 ## Live Version
 
-See the themes in this [link](). 
+See the themes in this [link](https://cdn.rawgit.com/jbkunst/chessboardjs-themes/master/index.html). 
 
 ## Why this
 
