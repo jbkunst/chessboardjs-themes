@@ -37,12 +37,26 @@ var board = ChessBoard('boardiv', {
 
 1. Wikipedia `wikipedia_theme`.
 
-![](chesspieces/wikipedia/alpha/bB.png]
-![](chesspieces/wikipedia/alpha/wQ.png]
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/wikipedia/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/wikipedia/wQ.png)
 
 1. USCF `uscf_theme`.
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/uscf/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/uscf/wQ.png)
+
+
 1. Symbol `symbol_theme`.
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/symbol/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/symbol/wQ.png)
+
 1. Dilena `dilena_theme`. This is a Chess Artwork for Pieces by [Daniela Di Lena](http://www.dilena.de/161491/1618285/work/chess-pieces-and-board).
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/dilena/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/dilena/wQ.png)
+
+
 
 ## To Do
 
