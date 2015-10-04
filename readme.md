@@ -32,11 +32,13 @@ var board = ChessBoard('boardiv', {
 
 1. Alpha `alpha_theme`.
 
-![chesspieces/alpha/wK.png]![chesspieces\alpha\wP.png]
+![https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/bB.png]
+![https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/wQ.png]
 
 1. Wikipedia `wikipedia_theme`.
 
-![chesspieces/wikipedia/wK.png]![chesspieces\wikipedia\wP.png]
+![https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/wikipedia/alpha/bB.png]
+![https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/wikipedia/alpha/wQ.png]
 
 1. USCF `uscf_theme`.
 1. Symbol `symbol_theme`.
