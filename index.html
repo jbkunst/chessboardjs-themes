@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>No images (images via uri)</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="chessboard.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <style>
+  .container {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 5px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="fluid-row">
+  <div class="col-md-4 container">
+    <h4>Alpha</h4>
+    <div id="board1" style="width: 100%"></div>
+  </div>
+  <div class="col-md-4 container">
+    <h4>Wikipedia</h4>
+    <div id="board2" style="width: 100%"></div>
+  </div>
+  <div class="col-md-4 container">
+    <h4>USCF</h4>
+    <div id="board3" style="width: 100%"></div>
+  </div>
+  <div class="col-md-4 container">
+    <h4>Symbol</h4>
+    <div id="board4" style="width: 100%"></div>
+  </div>
+  <div class="col-md-4 container">
+    <h4>Dylena</h4>
+    <div id="board5" style="width: 100%"></div>
+  </div>
+</div>
+
+<script src="http://chessboardjs.com/js/jquery-1.10.1.min.js"></script>
+<script src="chessboard.js"></script>
+<script src="chessboardjs.themes.data.js"></script>
+<script src="chessboardjs.themes.js"></script>
+
+<script>
+$(document).ready(function() {
+  
+
+  var board1 = ChessBoard('board1', {
+    pieceTheme: alpha_theme,
+    position: 'start'
+  });
+  
+  var board2 = ChessBoard('board2', {
+    pieceTheme: wikipedia_theme,
+    position: 'start'
+  });
+  
+  var board3 = ChessBoard('board3', {
+    pieceTheme: uscf_theme,
+    position: 'start'
+  });
+  
+  var board4 = ChessBoard('board4', {
+    pieceTheme: symbol_theme,
+    position: 'start'
+  });
+  
+  var board5 = ChessBoard('board5', {
+    pieceTheme: dilena_theme,
+    position: 'start'
+  });
+
+  $(window).resize(board1.resize);
+  $(window).resize(board2.resize);
+  $(window).resize(board3.resize);
+  $(window).resize(board4.resize);
+  $(window).resize(board5.resize);
+
+});
+</script>
+</body>
+</html>
