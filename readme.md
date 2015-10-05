@@ -8,7 +8,7 @@ See the themes in this [link](https://rawgit.com/jbkunst/chessboardjs-themes/mas
 
 ## Why this
 
-For necessity I needed remove images requiriments for pieces, so an alternative was turn 
+For necessity I was unable to use images so an alternative was turn 
 image to a data-uri format (via R script, that was the fun part ;) ).
 
 Other reson was have more pieces themes.
