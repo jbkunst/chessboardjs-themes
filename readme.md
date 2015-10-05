@@ -1,6 +1,6 @@
 # Chessboardjs Themes
 
-A differents set of pieces themes for *chessboardjs*. No images requiered.
+A differents set of pieces themes for [*chessboardjs*](http://chessboardjs.com/) by [Chris Oakman](https://github.com/oakmac). No images requiered.
 
 ## Live Version
 
