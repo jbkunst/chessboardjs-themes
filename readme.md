@@ -1,6 +1,6 @@
 # Chessboardjs Themes
 
-A differents set of pieces themes for [*chessboardjs*](http://chessboardjs.com/) by [Chris Oakman](https://github.com/oakmac). No images requiered.
+A set of pieces themes for [*chessboardjs*](http://chessboardjs.com/) by [Chris Oakman](https://github.com/oakmac). No images requiered.
 
 ## Live Version
 
@@ -60,5 +60,5 @@ var board = ChessBoard('boardiv', {
 
 ## To Do
 
-1. Color Themes: Create CSS themes or implement a easy way to add color via js function.
+1. Color Themes: Create CSS themes or implement a easy way to add colors via js function.
 2. More pieces.
