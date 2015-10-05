@@ -30,15 +30,20 @@ var board = ChessBoard('boardiv', {
 
 ## Themes
 
-1. Alpha `alpha_theme`.
-
-![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/bB.png)
-![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/wQ.png)
-
 1. Wikipedia `wikipedia_theme`.
 
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/wikipedia/bB.png)
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/wikipedia/wQ.png)
+
+1. Chess24 `chess24_theme`. This is from chess24.com site.
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/chess24/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/chess24/wQ.png)
+
+1. Alpha `alpha_theme`.
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/alpha/wQ.png)
 
 1. USCF `uscf_theme`.
 
@@ -57,8 +62,10 @@ var board = ChessBoard('boardiv', {
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/dilena/wQ.png)
 
 
-
 ## To Do
 
 1. Color Themes: Create CSS themes or implement a easy way to add colors via js function.
 2. More pieces.
+
+
+

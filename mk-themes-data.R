@@ -6,10 +6,32 @@ library("tools")
 library("jsonlite")
 library("V8")  
 library("whisker")
+library("httr")
 
 
-dir()
+#### Download from chess24 ####
+dir.create("chesspieces/chess24")
 
+url_template <- "https://d16lfcqjkxdsjm.cloudfront.net/assets/887a54bd2119bf34a0759ec1b6a1967a/images/chess/themes/pieces/chess24/{{ color }}/{{ piece }}.png"
+
+pieces <- expand.grid(color = c("white", "black"),
+                      piece = c("p", "r", "b", "k", "q", "n"))
+
+l_ply(seq(nrow(pieces)), function(i){ # i <- 2
+  
+  colr <- pieces$color[i]
+  piec <- pieces$piece[i]
+  
+  colr2 <- ifelse(colr == "white", "w", "b")
+  piec2 <- toupper(piec)
+  
+  url_template %>% 
+    whisker.render(list(color = colr, piece = piec)) %>% 
+    GET(write_disk(sprintf("chesspieces/chess24/%s%s.png", colr2, piec2), overwrite = TRUE))
+    
+})
+
+#### Creating jss ####
 folders <-  dir("chesspieces/", full.names = FALSE)
 folders
 
