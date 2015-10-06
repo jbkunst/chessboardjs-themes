@@ -55,6 +55,12 @@
       <div id="board5" style="width: 100%"></div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-4 container">
+      <h4>Leipzig</h4>
+      <div id="board7" style="width: 100%"></div>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -67,33 +73,46 @@ $(document).ready(function() {
   
   var board1 = ChessBoard('board1', {
     pieceTheme: alpha_theme,
+    showNotation: false,
     position: 'start'
   });
   
   var board2 = ChessBoard('board2', {
     pieceTheme: wikipedia_theme,
+    showNotation: false,
     position: 'start'
   });
   
   var board3 = ChessBoard('board3', {
     pieceTheme: uscf_theme,
+    showNotation: false,
     position: 'start'
   });
   
   var board4 = ChessBoard('board4', {
     pieceTheme: symbol_theme,
+    showNotation: false,
     position: 'start'
   });
   
   var board5 = ChessBoard('board5', {
     pieceTheme: dilena_theme,
+    showNotation: false,
     position: 'start'
   });
   
-    var board6 = ChessBoard('board6', {
+  var board6 = ChessBoard('board6', {
     pieceTheme: chess24_theme,
+    showNotation: false,
     position: 'start'
   });
+
+  var board7 = ChessBoard('board7', {
+    pieceTheme: leipzig_theme,
+    showNotation: false,
+    position: 'start'
+  });
+
 
   $(window).resize(board1.resize);
   $(window).resize(board2.resize);
@@ -101,6 +120,7 @@ $(document).ready(function() {
   $(window).resize(board4.resize);
   $(window).resize(board5.resize);
   $(window).resize(board6.resize);
+  $(window).resize(board7.resize);
 
 });
 </script>
