@@ -61,6 +61,12 @@ var board = ChessBoard('boardiv', {
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/dilena/bB.png)
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/dilena/wQ.png)
 
+1. Leipzig `leipzig_theme`. Source [here](http://www.enpassant.dk/chess/fonteng.htm).
+
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/leipzig/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/leipzig/wQ.png)
+
+
 
 ## To Do
 
