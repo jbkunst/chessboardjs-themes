@@ -66,7 +66,14 @@ var board = ChessBoard('boardiv', {
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/leipzig/bB.png)
 ![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/leipzig/wQ.png)
 
+1. Metro `metro_theme`. Source [here](https://dev.windows.com/en-us/microsoft-edge/testdrive/demos/chess/).
 
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/metro/bB.png)
+![](https://raw.githubusercontent.com/jbkunst/chessboardjs-themes/master/chesspieces/metro/wQ.png)
+
+## News
+
+- 2015-11-25: Adding metro theme ([source](https://dev.windows.com/en-us/microsoft-edge/testdrive/demos/chess/)].
 
 ## To Do
 
