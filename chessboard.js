@@ -445,6 +445,12 @@ function expandConfig() {
     cfg.pieceTheme = 'img/chesspieces/wikipedia/{piece}.png';
   }
 
+  // default color board theme
+  if (cfg.hasOwnProperty('boardTheme') !== true ||
+      cfg.boardTheme.length != 2 ){
+    cfg.boardTheme = ["#f0d9b5", "#b58863"];
+  }
+
   // animation speeds
   if (cfg.hasOwnProperty('appearSpeed') !== true ||
       validAnimationSpeed(cfg.appearSpeed) !== true) {
@@ -711,7 +717,7 @@ function animateSquareToSquare(src, dest, piece, completeFn) {
 
   // on complete
   var complete = function() {
-    // add the "real" piece to the destination square
+    //  the "real" piece to the destination square
     destSquareEl.append(buildPiece(piece));
 
     // remove the animated piece
@@ -979,9 +985,22 @@ function drawPositionInstant() {
   }
 }
 
+function addBoardTheme() {
+  var wcol = cfg.boardTheme[0];
+  var bcol = cfg.boardTheme[1];
+
+  containerEl.find(".white-1e1d7").css("background-color", wcol)
+  containerEl.find(".white-1e1d7").css("color", bcol)
+
+  containerEl.find(".black-3c85d").css("background-color", bcol)
+  containerEl.find(".black-3c85d").css("color", wcol)
+
+
+}
 function drawBoard() {
   boardEl.html(buildBoard(CURRENT_ORIENTATION));
   drawPositionInstant();
+  addBoardTheme();
 
   if (cfg.sparePieces === true) {
     if (CURRENT_ORIENTATION === 'white') {
