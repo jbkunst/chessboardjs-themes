@@ -4,136 +4,83 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>♕ Chessboarjs Pieces Themes</title>
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="chessboard.css" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <style>
   .container {
     font-family: 'Open Sans', sans-serif;
-    padding-bottom: 5px;
+    padding-bottom: 50px;
+  }
+  .boardcontainer {
+    width: 100%;
+    padding: 20px;
   }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="chessboard.js"></script>
+  <script src="chessboardjs-themes.js"></script>
 </head>
 <body>
 
 <div class="container">
   <h3>Chessboardjs Pieces Themes</h3>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Wikipedia</h4>
-      <div id="board2" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Chess24</h4>
-      <div id="board6" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Alpha</h4>
-      <div id="board1" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>USCF</h4>
-      <div id="board3" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Symbol</h4>
-      <div id="board4" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Dylena</h4>
-      <div id="board5" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Leipzig</h4>
-      <div id="board7" style="width: 100%"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 container">
-      <h4>Metro</h4>
-      <div id="board8" style="width: 100%"></div>
-    </div>
+  <div class="row" id="boardcontent">
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="chessboard.js"></script>
-<script src="chessboardjs.themes.data.js"></script>
-<script src="chessboardjs.themes.js"></script>
-
 <script>
 $(document).ready(function() {
-  
-  var board1 = ChessBoard('board1', {
-    pieceTheme: alpha_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board2 = ChessBoard('board2', {
-    pieceTheme: wikipedia_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board3 = ChessBoard('board3', {
-    pieceTheme: uscf_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board4 = ChessBoard('board4', {
-    pieceTheme: symbol_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board5 = ChessBoard('board5', {
-    pieceTheme: dilena_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board6 = ChessBoard('board6', {
-    pieceTheme: chess24_theme,
-    showNotation: false,
-    position: 'start'
+
+  var themes = ["chess24", "metro", "leipzig", "wikipedia", "uscf", "dilena", "symbol"];
+
+  themes.forEach(function(theme) {
+
+    coldiv = document.createElement("div");
+    coldiv.className = "col-md-4 container";
+
+    title = document.createElement("h4");
+    title.innerHTML = theme + " theme";
+
+    boarddiv = document.createElement("div");
+    boarddiv.id = theme
+    boarddiv.className = "boardcontainer";
+
+    coldiv.appendChild(title);
+    coldiv.appendChild(boarddiv);
+
+    document.getElementById("boardcontent").appendChild(coldiv);
+
+    var board =  ChessBoard(theme, {
+      pieceTheme: window[theme + "_piece_theme"],
+      position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R',
+      boardTheme: window[theme + "_board_theme"]
+    });
+
+    $(window).resize(board.resize);
+
   });
 
-  var board7 = ChessBoard('board7', {
-    pieceTheme: leipzig_theme,
-    showNotation: false,
-    position: 'start'
-  });
-  
-  var board8 = ChessBoard('board8', {
-    pieceTheme: metro_theme,
-    showNotation: false,
-    position: 'start'
+  /* adding default */
+  coldiv = document.createElement("div");
+  coldiv.className = "col-md-4 container";
+  title = document.createElement("h4");
+  title.innerHTML = "Default chessboardjs"
+  boarddiv = document.createElement("div");
+  boarddiv.id = "default"
+  boarddiv.className = "boardcontainer";
+
+  coldiv.appendChild(title);
+  coldiv.appendChild(boarddiv);
+
+  document.getElementById("boardcontent").appendChild(coldiv);
+  var board =  ChessBoard("default", {
+    pieceTheme: wikipedia_piece_theme,
+    position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R'
   });
 
-
-  $(window).resize(board1.resize);
-  $(window).resize(board2.resize);
-  $(window).resize(board3.resize);
-  $(window).resize(board4.resize);
-  $(window).resize(board5.resize);
-  $(window).resize(board6.resize);
-  $(window).resize(board7.resize);
-  $(window).resize(board8.resize);
+  $(window).resize(board.resize);
 
 });
 </script>
