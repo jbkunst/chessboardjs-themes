@@ -11,26 +11,36 @@ See the themes in this [link](https://rawgit.com/jbkunst/chessboardjs-themes/mas
 ## Why this
 
 In a project I was unable to use images so an alternative was turn 
-image to a data-uri format (via R script, that was the fun part ;) ).
+image to a data-uri format (via R script, that was the fun part ;)).
 
-Other reson was have more pieces themes.
+Other reson was have more pieces and board themes.
 
 ## How to use
 
 1. Load `chessboard.js` and `chessboard.css` as usual.
-2. Load `chessboardjs.themes.js` and `chessboardjs.themes.data.js`.
-3. Use them using `pieceTheme` configuration option.
+2. Load `chessboardjs-themes.js`.
+3. Use them using `pieceTheme` and `boardTheme`configuration option.
 
 ## Example Use
 
 ```
 var board = ChessBoard('boardiv', {
-  pieceTheme: symbol_theme,
+  pieceTheme: chess24_theme,
+  boardTheme: chess24_board_theme ,
   position: 'start'
 });
+
+var board2 = ChessBoard('boardiv2', {
+  pieceTheme: metro_theme,
+  boardTheme: metro_board_theme,
+  position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R'
+});
+
+});
+
 ```
 
-## Themes
+## Pieces Themes
 
 1. Wikipedia `wikipedia_theme`.
 
@@ -75,12 +85,8 @@ var board = ChessBoard('boardiv', {
 
 ## News
 
+- 2015-11-26: Adding the `boardTheme` option (this is nos supported via original chessboardjs, download this version instead).
 - 2015-11-25: Adding metro theme ([source](https://dev.windows.com/en-us/microsoft-edge/testdrive/demos/chess/)].
-
-## To Do
-
-1. Color Themes: Create CSS themes or implement a easy way to add colors via js function.
-2. More pieces.
 
 
 
