@@ -8,9 +8,9 @@ uscf_piece_theme = function(piece){ return chsspieces["uscf"][piece][0]; };
 wikipedia_piece_theme = function(piece){ return chsspieces["wikipedia"][piece][0]; };
 
 chess24_board_theme = ['#9E7863', '#633526'];
-metro_board_theme = ['#EFEFEF', '#FFFFFF'];
+metro_board_theme = ['#FFFFFF', '#EFEFEF'];
 leipzig_board_theme = ['#FFFFFF', '#E1E1E1'];
-wikipedia_board_theme = ['#D18B47', '#FFCE9E'];
+wikipedia_board_theme = ['#FFCE9E', '#D18B47'];
 dilena_board_theme = ['#FFE5B6', '#B16228'];
 uscf_board_theme = ['#C3C6BE', '#727FA2'];
 symbol_board_theme = ['#FFFFFF', '#58AC8A'];
